@@ -1,5 +1,5 @@
 [build]
-  command = "hugo && bash ./deploy_to_github.sh"
+  command = "bash ./init_repo.sh && hugo && bash ./deploy_to_github.sh"
   publish = "public"
 
 [build.environment]

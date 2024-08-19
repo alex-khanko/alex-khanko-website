@@ -18,16 +18,20 @@ git init
 git config user.name "$GIT_USER_NAME"
 git config user.email "$GIT_USER_EMAIL"
 
-# Check if the remote "origin" already exists
-if git remote | grep origin > /dev/null; then
+# Check if the branch already exists
+if git show-ref --verify --quiet refs/heads/$BRANCH; then
   git checkout $BRANCH
 else
-  # Add the remote GitHub repository
-  git remote add origin $GITHUB_REPO
   git checkout -b $BRANCH
 fi
 
-# Check if there are any changes to commit
+# Check if the remote 'origin' already exists, if not, add it
+if git remote | grep origin >/dev/null; then
+  git remote remove origin
+fi
+
+git remote add origin $GITHUB_REPO
+
 if git diff --quiet && git diff --staged --quiet; then
   echo "No changes to commit. Exiting."
   exit 0
