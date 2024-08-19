@@ -1,6 +1,6 @@
 [build]
   command = "hugo && bash ./deploy_to_github.sh"
-  publish = "dist"
+  publish = "public"
 
 [build.environment]
   HUGO_VERSION = "0.132.2"

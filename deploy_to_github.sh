@@ -2,7 +2,7 @@
 set -e
 
 # Variables
-DIST_DIR="dist"
+DIST_DIR="public"
 GITHUB_REPO="https://$GITHUB_TOKEN@github.com/alex-khanko/alex-khanko.github.io.git"
 BRANCH="main"
 GIT_USER_NAME="Aliaksei Khanko"
@@ -18,11 +18,20 @@ git init
 git config user.name "$GIT_USER_NAME"
 git config user.email "$GIT_USER_EMAIL"
 
-# Add the remote GitHub repository
-git remote add origin $GITHUB_REPO
+# Check if the remote "origin" already exists
+if git remote | grep origin > /dev/null; then
+  git checkout $BRANCH
+else
+  # Add the remote GitHub repository
+  git remote add origin $GITHUB_REPO
+  git checkout -b $BRANCH
+fi
 
-# Check out the target branch
-git checkout -b $BRANCH
+# Check if there are any changes to commit
+if git diff --quiet && git diff --staged --quiet; then
+  echo "No changes to commit. Exiting."
+  exit 0
+fi
 
 # Add and commit all files
 git add .
