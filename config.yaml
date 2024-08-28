@@ -97,8 +97,6 @@ params:
   addtional_menus:
     - title: READING
       href: /reading/
-    - title: POSTS
-      href: /posts/
   algolia:
     vars:
       - title
