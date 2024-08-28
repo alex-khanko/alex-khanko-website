@@ -53,17 +53,17 @@ params:
   friends: false
   bookmarks: true
   about_me: true
-  giscus:
-    data_repo: ak/ak.github.io
-    data_repo_id: data_repo_id
-    data_category: Announcements
-    data_category_id: data_category_id
-    data_mapping: pathname
-    data_reactions_enabled: '1'
-    data_emit_metadata: '0'
-    data_theme: light
-    data_lang: en
-    crossorigin: anonymous
+#  giscus:
+#    data_repo: ak/ak.github.io
+#    data_repo_id: data_repo_id
+#    data_category: Announcements
+#    data_category_id: data_category_id
+#    data_mapping: pathname
+#    data_reactions_enabled: '1'
+#    data_emit_metadata: '0'
+#    data_theme: light
+#    data_lang: en
+#    crossorigin: anonymous
 
   # We need a proxy to access Disqus api in China
   # disqus_proxy : 'https://disqusapi.zhaohuabing.com'
