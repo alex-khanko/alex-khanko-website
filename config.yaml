@@ -10,13 +10,6 @@ outputs:
   home:
     - HTML
     - RSS
-    - Algolia
-outputFormats:
-  Algolia:
-    baseName: algolia
-    isPlainText: true
-    mediaType: application/json
-    notAlternative: true
 markup:
   tableOfContents:
     endLevel: 2
@@ -38,11 +31,6 @@ params:
   page_view_conter: false
   leancloud_app_id: leancloud_app_id
   leancloud_app_key: leancloud_app_key
-  # https://forestry.io/blog/search-with-algolia-in-hugo/
-  algolia_search: true
-  algolia_appId: algolia_appId
-  algolia_indexName: blog
-  algolia_apiKey: algolia_apiKey
   sidebar_about_description: 'C Ambassador, engineer @t.io, creator @AM, open-source enthusiast, technical writer and life adventurer'
   sidebar_avatar: img/headshot-round-white.webp
   featured_tags: true
@@ -97,14 +85,3 @@ params:
   addtional_menus:
     - title: READING
       href: /reading/
-  algolia:
-    vars:
-      - title
-      - summary
-      - date
-      - publishdate
-      - expirydate
-      - permalink
-    params:
-      - categories
-      - tags
