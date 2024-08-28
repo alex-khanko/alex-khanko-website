@@ -1,0 +1,112 @@
+---
+baseurl: 'https://alex-khanko.github.io'
+title: Aliaksei Khanko Blog
+theme: hugo-theme-cleanwhite
+languageCode: en-us
+preserveTaxonomyNames: true
+paginate: 10
+hasCJKLanguage: true
+outputs:
+  home:
+    - HTML
+    - RSS
+    - Algolia
+outputFormats:
+  Algolia:
+    baseName: algolia
+    isPlainText: true
+    mediaType: application/json
+    notAlternative: true
+markup:
+  tableOfContents:
+    endLevel: 2
+    startLevel: 1
+  highlight:
+    style: dracula
+  goldmark:
+    renderer:
+      unsafe: true
+params:
+  header_image: /img/background.webp
+  SEOTitle: AK SEOTitle
+  description: AK Description
+  keyword: >-
+    alex, khanko, Khanko Blog, keyword, Istio, Kubernetes, Microservice, Envoy
+  slogan:
+  image_404: img/404-bg.jpg
+  title_404: Not found 404 custom title
+  page_view_conter: false
+  leancloud_app_id: leancloud_app_id
+  leancloud_app_key: leancloud_app_key
+  # https://forestry.io/blog/search-with-algolia-in-hugo/
+  algolia_search: true
+  algolia_appId: algolia_appId
+  algolia_indexName: blog
+  algolia_apiKey: algolia_apiKey
+  sidebar_about_description: 'C Ambassador, engineer @t.io, creator @AM, open-source enthusiast, technical writer and life adventurer'
+  sidebar_avatar: img/headshot-round-white.webp
+  featured_tags: true
+  featured_condition_size: 5
+  ba_track_id: ba_track_id
+  reward: false
+  reward_guide: Reward，Guide...
+  friends: false
+  bookmarks: true
+  about_me: true
+  giscus:
+    data_repo: ak/ak.github.io
+    data_repo_id: data_repo_id
+    data_category: Announcements
+    data_category_id: data_category_id
+    data_mapping: pathname
+    data_reactions_enabled: '1'
+    data_emit_metadata: '0'
+    data_theme: light
+    data_lang: en
+    crossorigin: anonymous
+
+  # We need a proxy to access Disqus api in China
+  # disqus_proxy : 'https://disqusapi.zhaohuabing.com'
+  # disqus_site : 'https://zhaohuabing.com'
+  social:
+    rss: true
+    email: ak@gmail.com
+    twitter: 'https://twitter.com/ak'
+    linkedin: 'https://www.linkedin.com/in/ak'
+    github: 'https://github.com/ak'
+    medium: 'https://medium.com/@ak'
+  friend_link:
+    - title: Friend Link
+      href: 'https://ak.com'
+    - title: Istio
+      href: 'https://istio.com/'
+  bookmark_link:
+    - title: bookmark_link
+      href: 'https://bookmark-link.net/'
+    - title: Istio bookmark_link
+      href: 'https://www.aa.com/istio-guide'
+  publications:
+    title: MY BOOKS
+    items:
+      - title: Book 1
+        image: /img/b1.webp
+        href: https://www.manning.com
+      - title: Book 2
+        image: /img/2021-08-26-istio-handbook/book.webp
+        href: https://www.manning.com
+  addtional_menus:
+    - title: READING
+      href: /reading/
+    - title: POSTS
+      href: /posts/
+  algolia:
+    vars:
+      - title
+      - summary
+      - date
+      - publishdate
+      - expirydate
+      - permalink
+    params:
+      - categories
+      - tags
