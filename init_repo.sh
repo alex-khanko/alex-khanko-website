@@ -20,3 +20,7 @@ find "$POSTS_DIR" -type f -name "*" -exec mv {} "$POSTS_DIR" \;
 
 # Remove all empty directories within 'posts'
 find "$POSTS_DIR" -type d -empty -delete
+
+#####
+
+git submodule update --init --recursive
