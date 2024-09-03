@@ -1,7 +1,7 @@
 ---
 baseurl: 'https://alex-khanko.github.io'
 title: Aliaksei Khanko Blog
-theme: hugo-theme-cleanwhite
+theme: cleanwhite
 languageCode: en-us
 preserveTaxonomyNames: true
 paginate: 10
