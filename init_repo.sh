@@ -23,4 +23,4 @@ find "$POSTS_DIR" -type d -empty -delete
 
 #####
 
-git submodule update --init --recursive
+git submodule foreach git pull origin master
